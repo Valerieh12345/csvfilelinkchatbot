@@ -1,0 +1,25 @@
+import pandas as pd
+
+data = {
+    "question": [
+        "What is a chatbot?",
+        "What is an AI?",
+        "Calculate age for 1990",
+        "Tell me about chatbot applications",
+        "I listen to Classical Music, recommend me Composers",
+        "What is my favorite chapter covered in the Wizard Level 2 and why",
+        "What do you think about Clevered"
+    ],
+    "answer": [
+        "A chatbot is a software application designed to simulate human conversation and provide automated responses.",
+        "AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in computers.",
+        "You would be {age} years old.",
+        "Chatbots are used in customer support, information retrieval, and more.",
+        "The Classical music genre is really wide, here are some famous composers: Mozart, Beethoven, Bach, Vivaldi, Schubert, Tchaikovsky, Brahms, Wagner, Liszt, Chopin,...",
+        "The Chapter you liked most, based on the data you implemented is the chapter 9: Build a ChatBot. The reason is, you got to learn how to build a chatbot, like me, which you found fun and entertaining.",
+        "Clevered is an amazing platform that helps people learn more about AI, coding... while making it entertaining for the students. It also has an amazing working team.",  
+    ]
+}
+
+df = pd.DataFrame(data)
+df.to_csv('qa_dataset.csv', index=False)
